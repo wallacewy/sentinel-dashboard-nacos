@@ -14,6 +14,12 @@ Sentinel 控制台是流量控制、熔断降级规则统一配置和管理的�
 mvn clean package
 ```
 
+使用如下命令将jar放进docker image:
+
+```bash
+docker build --force-rm=true --no-cache=true -t xxx/sentinel-dashboard:1.8.3 .
+docker run -d -e AUTH_PASS=sentinel -p 8858:8858 xxx/sentinel-dashboard:1.8.3
+```
 ### 1.2 如何启动
 
 使用如下命令启动编译后的控制台：
